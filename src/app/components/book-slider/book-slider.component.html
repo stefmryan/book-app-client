@@ -1,10 +1,29 @@
-<div>
-  <ul>
-    <li *ngFor="let book of books">
-      <img src={{book.image}} />
-      <div>{{book.title}}</div>
-      <div>{{book.author}}</div>
-      <div>{{book.description}}</div>
-    </li>
-  </ul>
+<div class="container">
+
+  <!-- Previous Button -->
+  <button id="prev-btn">
+    <fa-icon [icon]="faArrowAltCircleLeft"></fa-icon>
+  </button>
+
+  <!-- Book -->
+  <div id="book" class="book">
+    <!-- Paper 1 -->
+    <div id="p1" class="paper">
+      <div class="front">
+        <div id="f1" class="front-content">
+          <h1>Front 1</h1>
+        </div>
+      </div>
+      <div class="back">
+        <div id="b1" class="back-content">
+          <h1>Back 1</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Next Button -->
+  <button id="next-btn">
+    <fa-icon [icon]="faArrowAltCircleRight"></fa-icon>
+  </button>
 </div>
