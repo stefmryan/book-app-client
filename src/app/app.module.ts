@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BookSliderComponent } from './book-slider/book-slider.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookSliderComponent
   ],
   imports: [
     BrowserModule,
