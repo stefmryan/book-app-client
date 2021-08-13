@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
+import { Book } from 'src/app/Book';
 
 @Component({
   selector: 'app-book-slider',
@@ -7,11 +8,12 @@ import { BooksService } from 'src/app/services/books.service';
   styleUrls: ['./book-slider.component.css']
 })
 export class BookSliderComponent implements OnInit {
+  books:Book[] = [];
 
   constructor(private bookService: BooksService) { }
 
   ngOnInit(): void {
-    this.bookService.getBooks();
+    this.bookService.getBooks().subscribe((data)=> this.books = data);
   }
 
 }

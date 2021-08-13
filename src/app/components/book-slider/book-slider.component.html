@@ -1,1 +1,10 @@
-<p>book-slider works!</p>
+<div>
+  <ul>
+    <li *ngFor="let book of books">
+      <img src={{book.image}} />
+      <div>{{book.title}}</div>
+      <div>{{book.author}}</div>
+      <div>{{book.description}}</div>
+    </li>
+  </ul>
+</div>
