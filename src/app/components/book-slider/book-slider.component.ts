@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from 'src/app/services/books.service';
 
 @Component({
   selector: 'app-book-slider',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookSliderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bookService: BooksService) { }
 
   ngOnInit(): void {
+    this.bookService.getBooks();
   }
 
 }
