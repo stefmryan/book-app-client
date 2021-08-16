@@ -30,6 +30,7 @@
   position: relative;
   width: 350px;
   height: 500px;
+  transition: transform 0.5s;
 }
 
 .front,
@@ -92,6 +93,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   margin: 10px;
+  transition: transform 0.5s;
 }
 
 button:focus {
