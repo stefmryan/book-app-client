@@ -25,9 +25,16 @@ export class BookSliderComponent implements OnInit {
   isFlipped2: boolean = false;
   isFlipped3: boolean = false;
 
-  openBook(){
+  isTransformBookDiv: boolean = false;
+  isTransformPrevBtn: boolean = false;
+  isTransformNextBtn: boolean = false;
 
+  openBook(){
+this.isTransformBookDiv = true;
+this.isTransformPrevBtn = true;
+this.isTransformNextBtn = true;
   }
+
   closeBook(isAtBeginning:boolean){
 console.log(isAtBeginning);
   }
