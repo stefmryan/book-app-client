@@ -29,24 +29,24 @@ export class BookSliderComponent implements OnInit {
   isTransformPrevBtn: boolean = false;
   isTransformNextBtn: boolean = false;
 
-  //isAtBeginning: boolean = false;
-
   moveBookDiv: string = "";
 
-
-
   openBook(){
-this.isTransformBookDiv = true;
-this.isTransformPrevBtn = true;
-this.isTransformNextBtn = true;
+    this.isTransformBookDiv = true;
+    this.isTransformPrevBtn = true;
+    this.isTransformNextBtn = true;
   }
 
   closeBook(isAtBeginning:boolean){
     if(isAtBeginning){
       this.moveBookDiv = "translateX(0%)"
+      console.log(this.isTransformNextBtn);
     }else{
       this.moveBookDiv = "translateX(100%)"
+      console.log(this.isTransformNextBtn);
     }
+    this.isTransformNextBtn = false;
+    this. isTransformPrevBtn = false;
   }
 
   goNextPage(){
@@ -61,6 +61,7 @@ this.isTransformNextBtn = true;
           break;
         case 3:
           this.isFlipped3 = true;
+          this.isTransformBookDiv = false;
           this.closeBook(false);
           break;
         default:
@@ -76,8 +77,6 @@ this.isTransformNextBtn = true;
       switch(this.currentLocation) {
         case 2:
           this.isTransformBookDiv = false;
-          // this.isTransformNextBtn = false;
-          // this.isTransformPrevBtn = false;
           this.closeBook(true);
           this.isFlipped1 = false;
           break;
