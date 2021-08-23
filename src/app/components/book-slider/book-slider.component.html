@@ -9,12 +9,15 @@
   <!-- Book -->
   <div id="book" class="book" [ngStyle]="{'transform': isTransformBookDiv ? 'translateX(50%)' : moveBookDiv}">
     <!-- Paper 1 -->
+
     <div id="p1" [ngClass]="{'flipped': isFlipped1}" [ngStyle]="{'z-index': isFlipped1 ? 1 : 3}" class="paper">
       <div class="front">
         <div id="f1" class="front-content">
           <h1>Front 1</h1>
         </div>
       </div>
+
+
 
       <!--utilize Server info-->
 
@@ -25,6 +28,7 @@
         </div>
       </div>
     </div>
+
     <!-- Paper 2 -->
     <div id="p2" *ngFor="let book of books" [ngClass]="{'flipped': isFlipped2}"
       [ngStyle]="{'z-index': isFlipped2 ? 2 : 2}" class="paper">
@@ -43,7 +47,7 @@
       </div>
     </div>
     <!-- Paper 3 -->
-    <div id="p3" [ngClass]="{'flipped': isFlipped3}" [ngStyle]="{'z-index': isFlipped3 ? 3 : 1}" class="paper">
+    <!-- <div id="p3" [ngClass]="{'flipped': isFlipped3}" [ngStyle]="{'z-index': isFlipped3 ? 3 : 1}" class="paper">
       <div class="front">
         <div id="f3" class="front-content">
           <h1>Front 3</h1>
@@ -54,7 +58,7 @@
           <h1>Back 3</h1>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- Next Button -->
