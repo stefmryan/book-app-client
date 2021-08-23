@@ -15,19 +15,27 @@
           <h1>Front 1</h1>
         </div>
       </div>
-      <div class="back">
+
+      <!--utilize Server info-->
+
+      <div class="back" *ngFor="let book of books">
         <div id="b1" class="back-content">
-          <h1>Back 1</h1>
+          <h1>{{book.title}}</h1>
+          <h3>{{book.author}}</h3>
         </div>
       </div>
     </div>
     <!-- Paper 2 -->
-    <div id="p2" [ngClass]="{'flipped': isFlipped2}" [ngStyle]="{'z-index': isFlipped2 ? 2 : 2}" class="paper">
+    <div id="p2" *ngFor="let book of books" [ngClass]="{'flipped': isFlipped2}"
+      [ngStyle]="{'z-index': isFlipped2 ? 2 : 2}" class="paper">
       <div class="front">
         <div id="f2" class="front-content">
-          <h1>Front 2</h1>
+          <h1>{{book.description}}</h1>
         </div>
       </div>
+
+      <!-- end Server info-->
+
       <div class="back">
         <div id="b2" class="back-content">
           <h1>Back 2</h1>
