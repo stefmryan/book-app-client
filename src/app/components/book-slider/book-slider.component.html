@@ -10,27 +10,29 @@
   <div id="book" class="book" [ngStyle]="{'transform': isTransformBookDiv ? 'translateX(50%)' : moveBookDiv}">
     <!-- Paper 1 -->
 
-    <div id="p1" [ngClass]="{'flipped': isFlipped1}" [ngStyle]="{'z-index': isFlipped1 ? 1 : 3}" class="paper">
+    <div id="p1" [ngClass]="{'flipped': isFlipped1}" [ngStyle]="{'z-index': isFlipped1 ? 1 : 3}" class="paper"
+      *ngFor="let book of books">
       <div class="front">
         <div id="f1" class="front-content">
-          <h1>Front 1</h1>
+          <img src={{book.image}} />
         </div>
       </div>
 
 
 
       <!--utilize Server info-->
-
-      <div class="back" *ngFor="let book of books">
-        <div id="b1" class="back-content">
-          <h1>{{book.title}}</h1>
-          <h3>{{book.author}}</h3>
+      <div>
+        <div class="back">
+          <div id="b1" class="back-content">
+            <h1>{{book.title}}</h1>
+            <h3>{{book.author}}</h3>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Paper 2 -->
-    <div id="p2" *ngFor="let book of books" [ngClass]="{'flipped': isFlipped2}"
+    <div id="p1" *ngFor="let book of books" [ngClass]="{'flipped': isFlipped2}"
       [ngStyle]="{'z-index': isFlipped2 ? 2 : 2}" class="paper">
       <div class="front">
         <div id="f2" class="front-content">
